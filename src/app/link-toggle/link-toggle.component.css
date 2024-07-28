@@ -1,0 +1,33 @@
+.hidden {
+    display: none !important;
+}
+.unhide {
+    display: none;
+}
+.normal{
+    width: 150px;
+    transform: unset;
+    writing-mode: initial;
+    border: 1px solid lightgray;
+    display: flex;
+}
+.list{
+    height: 300px;
+    width: 150px;
+    background: white;
+    text-align: justify;
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: row;
+  }
+.tick {
+    color: lightcyan;
+}
+.tickComplete {
+    color: gray;
+}
+.tick:hover {
+    color: gray;
+}

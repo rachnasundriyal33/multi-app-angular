@@ -1,0 +1,95 @@
+.toolbar {
+    height:10%;
+    background-color: #4c4068;
+}
+
+.biggerbutton {
+    width:  150px!important;
+    height: 100px!important;
+    font-size: 30px!important;
+}
+
+.toolBarButton, .drawerButton {
+    padding: 20px;
+}
+
+.container {
+    height: 90%;
+}
+
+.drawer {
+    width: 200px; 
+}
+
+.burger {
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+  
+@media all and (max-width: 500px) {
+
+    .toolBarButton {
+        display: none;
+    }
+
+    .toolbar {
+        height:5%;
+    }
+
+    .container {
+        height: 95%;
+    }
+
+}
+
+
+
+.loading-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 5;
+}
+
+.site-container {
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100vh;
+  background: #f1f1f1;
+  overflow: hidden;
+
+  .site-header {
+    height: 64px;
+  }
+
+  .site-content {
+    height: calc(100vh - 65px);
+    padding: 0 15px;
+    overflow: auto;
+  }
+}
+

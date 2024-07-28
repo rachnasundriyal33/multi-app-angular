@@ -1,0 +1,37 @@
+<mat-toolbar class="toolbar">
+  <button 
+      (click)="drawer.toggle()"
+      mat-icon-button
+      class="burger">
+      <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-drawer-container 
+class="container" 
+[hasBackdrop]="mdcBackdrop">
+<mat-drawer #drawer class="drawer"  [mode]="drawerMode">
+
+
+<mat-sidenav #sidenav opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+  <mat-nav-list class="drawer">
+    <mat-list-item class="parent" (click)="drawer.toggle()" routerLinkActive="mat-accent" routerLink="a">
+      <span class="full-width" *ngIf="isExpanded || isShowing">Home</span>
+      <mat-icon mat-list-icon>home</mat-icon>
+      <mat-icon class="menu-button">expand_more</mat-icon>
+    </mat-list-item>
+    <div class="expanded">
+      <a mat-list-item (click)="drawer.toggle()"
+      routerLinkActive="mat-accent" routerLink="a">A</a>
+      <a mat-list-item (click)="drawer.toggle()"
+      routerLinkActive="mat-accent" routerLink="b">B</a>
+    </div>
+  </mat-nav-list>
+  <mat-nav-list>
+</mat-nav-list>
+</mat-sidenav>
+</mat-drawer>
+<mat-drawer-content style="position: relative;">
+  <router-outlet></router-outlet>
+</mat-drawer-content>
+</mat-drawer-container>
+

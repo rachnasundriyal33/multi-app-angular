@@ -1,0 +1,8 @@
+<p>Links!</p>
+<div #linkList class="list">
+    <span style="background-color: lightgray;"><mat-icon (click)="load()">refresh</mat-icon></span>
+    <span *ngFor="let tk of links" class="normal">
+        <mat-icon>link</mat-icon>
+        <p (click)="open(tk)">{{tk}}</p>
+    </span>
+</div>
